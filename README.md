@@ -14,14 +14,16 @@ Preprocessing: Scikit-Learn (StandardScaler, TimeSeriesSplit)
 API Testing: Postman (for RESTful endpoint validation)
 
 🏗️ Model Architecture & Workflow1.
-Feature EngineeringFollowing the assignment’s core requirements, the following features were engineered:Data Delta ($\Delta$): Calculated as $Data_{t} - Data_{t-1}$ to capture momentum.
-Lagged Price: Included the current day's price to provide the model with a baseline for $t+1$ predictions.
-Target Alignment: Shifted the Price column by $-1$ to align features at $T$ with the label at $T+1$.2. 
-Preprocessing & ScalingTo resolve issues with non-stationary data and varied scales (which initially caused high RMSE):Standardization: Applied StandardScaler to both features ($X$) and the target ($y$).
-This ensures the XGBoost optimizer treats the variance in data delta and absolute price with appropriate weight.3. 
-Training StrategyValidation: Employed TimeSeriesSplit with 5 folds.
-This is critical for financial data to prevent Data Leakage, ensuring the model never "sees" the future during the training phase.
-Algorithm: Selected XGBRegressor for its ability to capture non-linear relationships and its robustness against outliers.
+Feature EngineeringFollowing the assignment’s core requirements, the following features were engineered:
+  Data Delta ($\Delta$): Calculated as $Data_{t} - Data_{t-1}$ to capture momentum.
+  Lagged Price: Included the current day's price to provide the model with a baseline for $t+1$ predictions.
+  Target Alignment: Shifted the Price column by $-1$ to align features at $T$ with the label at $T+1$.2. 
+  Preprocessing & ScalingTo resolve issues with non-stationary data and varied scales (which initially caused high RMSE):Standardization: Applied StandardScaler to both features ($X$)    and the target ($y$).
+  
+  This ensures the XGBoost optimizer treats the variance in data delta and absolute price with appropriate weight.3. 
+  Training StrategyValidation: Employed TimeSeriesSplit with 5 folds.
+  This is critical for financial data to prevent Data Leakage, ensuring the model never "sees" the future during the training phase.
+  Algorithm: Selected XGBRegressor for its ability to capture non-linear relationships and its robustness against outliers.
 
 📊 Evaluation Results
 The model is evaluated based on its ability to minimize the error between the predicted and actual price.
