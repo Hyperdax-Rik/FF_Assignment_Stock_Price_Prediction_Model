@@ -14,7 +14,7 @@ Preprocessing: Scikit-Learn (StandardScaler, TimeSeriesSplit)
 API Testing: Postman (for RESTful endpoint validation)
 
 🏗️ Model Architecture & Workflow1.
-Feature EngineeringFollowing the assignment’s core requirements, the following features were engineered:
+  Feature EngineeringFollowing the assignment’s core requirements, the following features were engineered:
   Data Delta ($\Delta$): Calculated as $Data_{t} - Data_{t-1}$ to capture momentum.
   Lagged Price: Included the current day's price to provide the model with a baseline for $t+1$ predictions.
   Target Alignment: Shifted the Price column by $-1$ to align features at $T$ with the label at $T+1$.2. 
