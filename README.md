@@ -7,8 +7,8 @@ This project was developed as part of the Python Developer Intern (II) 2026 asse
 The core architecture relies on the assumption that stock price volatility is primarily driven by the day-over-day change (Delta) in specific independent variables rather than their absolute values.
 Core AssumptionsPrimary Influence: Next-day stock prices are modeled as a function of the previous day's data delta.Scope: Focused exclusively on the provided datasets, ignoring external macroeconomic factors to isolate the relationship between the given variables.
 
-🛠️ Technical StackLanguage: 
-Python 3.13Data Manipulation: Pandas, NumPy
+🛠️ Technical StackLanguage: Python 3.13
+Data Manipulation: Pandas, NumPy
 Machine Learning: XGBoost (Gradient Boosted Decision Trees)
 Preprocessing: Scikit-Learn (StandardScaler, TimeSeriesSplit)
 API Testing: Postman (for RESTful endpoint validation)
