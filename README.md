@@ -25,5 +25,5 @@ API Testing: Postman (for RESTful endpoint validation)
   This is critical for financial data to prevent Data Leakage, ensuring the model never "sees" the future during the training phase.
   Algorithm: Selected XGBRegressor for its ability to capture non-linear relationships and its robustness against outliers.
 
-📊 Evaluation Results
+📊 Evaluation Results:
 The model is evaluated based on its ability to minimize the error between the predicted and actual price.
